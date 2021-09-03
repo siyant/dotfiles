@@ -19,4 +19,4 @@ source ~/.bash_profile
 ln -sfv $DOTFILES_DIR/vscode/*.json ~/Library/Application\ Support/Code/User
 
 # Karabiner
-ln -sfv $DOTFILES_DIR/karabiner/* ~/.config/karabiner
+ln -sfv $DOTFILES_DIR/karabiner ~/.config
