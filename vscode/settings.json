@@ -1,0 +1,78 @@
+{
+  "git.autofetch": true,
+  "workbench.colorTheme": "Nord",
+  "workbench.colorCustomizations": {
+    "[Nord]": {
+      "editor.background": "#282e33",
+      "editor.foreground": "#ffffff",
+      "sideBar.background": "#282e33",
+      "activityBar.background": "#282e33",
+      "sideBarSectionHeader.background": "#282e33",
+      "panel.background": "#282e33",
+      "titleBar.activeBackground": "#282e33",
+      "titleBar.inactiveBackground": "#282e33",
+      "editorGroupHeader.tabsBackground": "#282e33",
+      "editorGutter.background": "#282e33",
+      "tab.activeBackground": "#282e33",
+      "tab.inactiveBackground": "#282e33",
+      "terminal.background": "#282e33"
+    },
+    "list.errorForeground": "#9bd5e0",
+    "list.warningForeground": "#9bd5e0",
+    "gitDecoration.modifiedResourceForeground": "#d9e6c4",
+    "gitDecoration.untrackedResourceForeground": "#d9e6c4"
+  },
+  "workbench.editor.decorations.badges": false,
+  "workbench.editor.decorations.colors": false,
+  "explorer.confirmDragAndDrop": false,
+  "editor.tabSize": 2,
+  "explorer.confirmDelete": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "java.errors.incompleteClasspath.severity": "ignore",
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.wrappingIndent": "indent",
+  "editor.fontSize": 16,
+  "editor.wordWrap": "on",
+  "extensions.ignoreRecommendations": false,
+  "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
+  "dart.debugExternalLibraries": true,
+  "dart.debugSdkLibraries": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.formatOnSave": true,
+  "java.imports.gradle.wrapper.checksums": [
+    {
+      "sha256": "1e22fbc17b2938db02a91fabca4de4bf44cbfeac3d1f1eb1d5d0554f013268a6",
+      "allowed": false
+    }
+  ],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "python.defaultInterpreterPath": "/usr/bin/python3",
+  "python.languageServer": "Pylance",
+  "python.formatting.provider": "black",
+  "python.showStartPage": false,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "editor.copyWithSyntaxHighlighting": false
+}
