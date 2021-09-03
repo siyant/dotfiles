@@ -11,3 +11,9 @@ ln -sfv $DOTFILES_DIR/.bash_profile ~
 ln -sfv $DOTFILES_DIR/.bash_aliases ~
 ln -sfv $DOTFILES_DIR/macos ~
 source ~/.bash_profile
+
+# VS Code
+# Install extensions
+. $DOTFILES_DIR/vscode/extensions.sh
+# Symlink preferences files
+ln -sfv $DOTFILES_DIR/vscode/*.json ~/Library/Application\ Support/Code/User
