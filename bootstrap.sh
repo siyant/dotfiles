@@ -9,6 +9,7 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # Symlink files to home directory
 ln -sfv $DOTFILES_DIR/.bash_profile ~
 ln -sfv $DOTFILES_DIR/.bash_aliases ~
+ln -sfv $DOTFILES_DIR/.bash_prompt ~
 ln -sfv $DOTFILES_DIR/macos ~
 source ~/.bash_profile
 

@@ -5,6 +5,10 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/H
 # Add aliases
 [ -f ~/.bash_aliases ] && . ~/.bash_aliases
 
+# Custom bash prompt (from https://github.com/jimeh/git-aware-prompt)
+export GITAWAREPROMPT=~/.bash_prompt
+source "${GITAWAREPROMPT}/main.sh"
+
 # For virtualenv & virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Documents
