@@ -28,7 +28,7 @@
       ]
     },
     {
-      "description": "CAPS LOCK + Firefox/Terminal/Vscode/Sublime/Macpass/A(finder)/Chrome/Windows/Postman/Intellij",
+      "description": "CAPS LOCK + Firefox/Terminal/Vscode/Sublime/Macpass/A(finder)/Chrome/Windows/Postman/Intellij/toDoist",
       "manipulators": [
         {
           "type": "basic",
@@ -230,6 +230,27 @@
           "to": [
             {
               "shell_command": "open '/Applications/IntelliJ IDEA CE.app'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "caps_lock pressed",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "d",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open /Applications/Todoist.app"
             }
           ],
           "conditions": [
