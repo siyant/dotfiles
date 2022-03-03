@@ -27,5 +27,7 @@ export PATH="/usr/local/Cellar/python@3.9/3.9.2_1/Frameworks/Python.framework/Ve
 export MAVEN_HOME=/Library/apache-maven-3.6.3
 export PATH=$MAVEN_HOME/bin:$PATH
 
+export ANDROID_SDK_ROOT=/Users/siyan/Library/Android/sdk
+
 # Remove "xxx is an application downloaded from the internet" warning
 export HOMEBREW_CASK_OPTS=--no-quarantine

@@ -5,10 +5,10 @@
         "revision": "4b703e446be1d848521b0bdf3e85f36bb3aae1f9"
       },
       "homebrew/cask": {
-        "revision": "977c50fae3554bde74042572b3a95fc2686408f9"
+        "revision": "83cc998631a2cecbb6910ec76940257894be757a"
       },
       "homebrew/core": {
-        "revision": "1e1277073d78491891a61ff5b6eb1c6cc2008340"
+        "revision": "beee0dd51256a9d3823207bbb7c387bb1f688e0e"
       }
     },
     "brew": {
@@ -94,6 +94,40 @@
             }
           }
         }
+      },
+      "openjdk@8": {
+        "version": "1.8.0+312",
+        "bottle": {
+          "rebuild": 0,
+          "root_url": "https://ghcr.io/v2/homebrew/core",
+          "files": {
+            "monterey": {
+              "cellar": ":any",
+              "url": "https://ghcr.io/v2/homebrew/core/openjdk/8/blobs/sha256:d6904e2576f8876bae57288f6655686799506763ff49eb0939082c404f84dd02",
+              "sha256": "d6904e2576f8876bae57288f6655686799506763ff49eb0939082c404f84dd02"
+            },
+            "big_sur": {
+              "cellar": ":any",
+              "url": "https://ghcr.io/v2/homebrew/core/openjdk/8/blobs/sha256:5bcb2cbf4502f83cb2bfa439c8b838cc6573a39bd1c230cd51b076ba40d3198d",
+              "sha256": "5bcb2cbf4502f83cb2bfa439c8b838cc6573a39bd1c230cd51b076ba40d3198d"
+            },
+            "catalina": {
+              "cellar": ":any",
+              "url": "https://ghcr.io/v2/homebrew/core/openjdk/8/blobs/sha256:3aef1fb4ca615ab2700103502213b4346f1867a95d34a2981689d8bba81faedc",
+              "sha256": "3aef1fb4ca615ab2700103502213b4346f1867a95d34a2981689d8bba81faedc"
+            },
+            "mojave": {
+              "cellar": ":any",
+              "url": "https://ghcr.io/v2/homebrew/core/openjdk/8/blobs/sha256:8f036a79d42e0ea7719ba6cad997cf6aec791c163bef744a929375a2e9c69779",
+              "sha256": "8f036a79d42e0ea7719ba6cad997cf6aec791c163bef744a929375a2e9c69779"
+            },
+            "x86_64_linux": {
+              "cellar": ":any_skip_relocation",
+              "url": "https://ghcr.io/v2/homebrew/core/openjdk/8/blobs/sha256:fe6095f8af1e870dc2bcc2888cf74a92985431bb4210df9214bcdc991161408a",
+              "sha256": "fe6095f8af1e870dc2bcc2888cf74a92985431bb4210df9214bcdc991161408a"
+            }
+          }
+        }
       }
     },
     "cask": {
@@ -168,6 +202,24 @@
         "options": {
           "full_name": "visual-studio-code"
         }
+      },
+      "android-studio": {
+        "version": "2021.1.1.20",
+        "options": {
+          "full_name": "android-studio"
+        }
+      },
+      "discord": {
+        "version": "0.0.264",
+        "options": {
+          "full_name": "discord"
+        }
+      },
+      "flutter": {
+        "version": "2.10.0",
+        "options": {
+          "full_name": "flutter"
+        }
       }
     }
   },
@@ -176,7 +228,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.3.13",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "1e1277073d78491891a61ff5b6eb1c6cc2008340",
+        "Homebrew/homebrew-core": "beee0dd51256a9d3823207bbb7c387bb1f688e0e",
         "CLT": "13.0.0.0.1.1627064638",
         "Xcode": "13.1",
         "macOS": "12.2"
