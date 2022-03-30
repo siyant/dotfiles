@@ -49,3 +49,9 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -int 1
 
 # Show battery percentage in menu bar
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
+# Dock: tile size
+defaults write com.apple.dock tilesize -int 24
+
+# Dock: remove all app icons
+defaults write com.apple.dock persistent-apps -array
