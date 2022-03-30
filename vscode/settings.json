@@ -52,6 +52,9 @@
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.fontFamily": "Input, 'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
   "dart.debugExternalLibraries": true,
   "dart.debugSdkLibraries": false,
@@ -79,9 +82,7 @@
   "[dart]": {
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
-    "editor.rulers": [
-      80
-    ],
+    "editor.rulers": [80],
     "editor.selectionHighlight": false,
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.suggestSelection": "first",
@@ -89,5 +90,6 @@
     "editor.wordBasedSuggestions": false
   },
   "editor.formatOnSave": true,
-  "dart.debugExternalPackageLibraries": false
+  "python.formatting.blackPath": "/Users/siyan/Library/Python/3.8/bin/black",
+  "redhat.telemetry.enabled": true
 }

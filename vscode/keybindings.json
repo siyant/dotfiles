@@ -217,17 +217,12 @@
     "command": "workbench.action.previousEditor"
   },
   {
-    "key": "alt+k",
-    "command": "bracket-select.select",
-    "when": "editorTextFocus"
-  },
-  {
     "key": "alt+a",
     "command": "-bracket-select.select",
     "when": "editorTextFocus"
   },
   {
-    "key": "alt+j",
+    "key": "shift+cmd+j",
     "command": "bracket-select.undo-select",
     "when": "editorTextFocus"
   },
@@ -285,5 +280,18 @@
   {
     "key": "ctrl+shift+-",
     "command": "-workbench.action.navigateForward"
+  },
+  {
+    "key": "cmd+k /",
+    "command": "editor.action.selectToBracket"
+  },
+  {
+    "key": "cmd+j",
+    "command": "bracket-select.select"
+  },
+  {
+    "key": "alt+cmd+a",
+    "command": "-bracket-select.select-include",
+    "when": "editorTextFocus"
   }
 ]
