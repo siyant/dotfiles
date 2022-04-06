@@ -39,7 +39,7 @@
   "java.errors.incompleteClasspath.severity": "ignore",
   "workbench.startupEditor": "newUntitledFile",
   "editor.wrappingIndent": "indent",
-  "editor.fontSize": 16,
+  "editor.fontSize": 15,
   "editor.wordWrap": "on",
   "extensions.ignoreRecommendations": false,
   "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
@@ -52,11 +52,13 @@
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
   "dart.debugExternalLibraries": true,
   "dart.debugSdkLibraries": false,
   "workbench.iconTheme": "material-icon-theme",
-  "editor.formatOnSave": true,
   "java.imports.gradle.wrapper.checksums": [
     {
       "sha256": "1e22fbc17b2938db02a91fabca4de4bf44cbfeac3d1f1eb1d5d0554f013268a6",
@@ -66,7 +68,6 @@
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
   },
-  "python.defaultInterpreterPath": "/usr/bin/python3",
   "python.languageServer": "Pylance",
   "python.formatting.provider": "black",
   "python.showStartPage": false,
@@ -74,5 +75,21 @@
     "default": "right",
     "jupyter-notebook": "left"
   },
-  "editor.copyWithSyntaxHighlighting": false
+  "editor.copyWithSyntaxHighlighting": false,
+  "editor.fontLigatures": true,
+  "editor.find.cursorMoveOnType": false,
+  "editor.codeLensFontFamily": "IIn",
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "editor.formatOnSave": true,
+  "python.formatting.blackPath": "/Users/siyan/Library/Python/3.8/bin/black",
+  "redhat.telemetry.enabled": true
 }

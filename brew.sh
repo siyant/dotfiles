@@ -5,6 +5,9 @@ which -s brew
 if [[ $? != 0 ]] ; then
   echo "Installing homebrew"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  echo "Adding homebrew to path"
+  echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/siyan/.bash_profile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 else
   echo "Updating homebrew"
   brew update
