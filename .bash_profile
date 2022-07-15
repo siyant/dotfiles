@@ -18,10 +18,11 @@ export MAVEN_HOME=/Library/apache-maven-3.6.3
 export PATH=$MAVEN_HOME/bin:$PATH
 
 # Python
+export PATH=/Users/siyan/Library/Python/3.8/bin:$PATH
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Documents
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-#source /usr/local/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source /Users/siyan/Library/Python/3.8/bin/virtualenvwrapper.sh
 
 # For create-react-app to use default browser
 export BROWSER=none

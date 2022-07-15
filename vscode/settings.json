@@ -3,19 +3,19 @@
   "workbench.colorTheme": "Nord",
   "workbench.colorCustomizations": {
     "[Nord]": {
-      "editor.background": "#282e33",
+      "editor.background": "#12191d",
       "editor.foreground": "#ffffff",
-      "sideBar.background": "#282e33",
-      "activityBar.background": "#282e33",
-      "sideBarSectionHeader.background": "#282e33",
-      "panel.background": "#282e33",
-      "titleBar.activeBackground": "#282e33",
-      "titleBar.inactiveBackground": "#282e33",
-      "editorGroupHeader.tabsBackground": "#282e33",
-      "editorGutter.background": "#282e33",
-      "tab.activeBackground": "#282e33",
-      "tab.inactiveBackground": "#282e33",
-      "terminal.background": "#282e33"
+      "sideBar.background": "#12191d",
+      "activityBar.background": "#12191d",
+      "sideBarSectionHeader.background": "#12191d",
+      "panel.background": "#12191d",
+      "titleBar.activeBackground": "#12191d",
+      "titleBar.inactiveBackground": "#12191d",
+      "editorGroupHeader.tabsBackground": "#12191d",
+      "editorGutter.background": "#12191d",
+      "tab.activeBackground": "#12191d",
+      "tab.inactiveBackground": "#12191d",
+      "terminal.background": "#12191d"
     },
     "list.errorForeground": "#9bd5e0",
     "list.warningForeground": "#9bd5e0",
@@ -55,6 +55,9 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
   "dart.debugExternalLibraries": true,
   "dart.debugSdkLibraries": false,
@@ -91,5 +94,12 @@
   },
   "editor.formatOnSave": true,
   "python.formatting.blackPath": "/Users/siyan/Library/Python/3.8/bin/black",
-  "redhat.telemetry.enabled": true
+  "redhat.telemetry.enabled": true,
+  "vim.cursorStylePerMode.insert": "line",
+  "vim.cursorStylePerMode.normal": "line",
+  "vim.cursorStylePerMode.replace": "line",
+  "vim.cursorStylePerMode.visual": "line",
+  "vim.cursorStylePerMode.visualblock": "line",
+  "vim.cursorStylePerMode.visualline": "line",
+  "workbench.fontAliasing": "antialiased"
 }

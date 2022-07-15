@@ -293,5 +293,10 @@
     "key": "alt+cmd+a",
     "command": "-bracket-select.select-include",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
+    "when": "!activeEditorGroupEmpty"
   }
 ]
