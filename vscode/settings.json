@@ -96,10 +96,16 @@
   "python.formatting.blackPath": "/Users/siyan/Library/Python/3.8/bin/black",
   "redhat.telemetry.enabled": true,
   "vim.cursorStylePerMode.insert": "line",
-  "vim.cursorStylePerMode.normal": "line",
+  "vim.cursorStylePerMode.normal": "block",
   "vim.cursorStylePerMode.replace": "line",
-  "vim.cursorStylePerMode.visual": "line",
+  "vim.cursorStylePerMode.visual": "underline",
   "vim.cursorStylePerMode.visualblock": "line",
   "vim.cursorStylePerMode.visualline": "line",
-  "workbench.fontAliasing": "antialiased"
+  "workbench.fontAliasing": "antialiased",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.accessibilitySupport": "off",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  },
+  "window.zoomLevel": 1
 }

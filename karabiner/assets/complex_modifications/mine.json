@@ -2,6 +2,56 @@
   "title": "siyan's",
   "rules": [
     {
+      "description": "Caps Lock to Escape on single press, Hyper on press and hold.",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_shift",
+              "modifiers": ["left_command", "left_control", "left_option"]
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "escape"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Control to Caps Lock if alone",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_control",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "caps_lock",
+              "hold_down_milliseconds": 500
+            }
+          ]
+        }
+      ]
+    },
+    {
       "description": "Simultaneous Equal+Delete to forward delete",
       "manipulators": [
         {
@@ -28,26 +78,50 @@
       ]
     },
     {
-      "description": "CAPS LOCK + Firefox/Terminal/Vscode/Sublime/Macpass/A(finder)/Chrome/Windows/Postman/Intellij/toDoist",
+      "description": "Caps Lock + Delete to forward delete",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "delete_or_backspace",
+            "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_forward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Caps Lock + Firefox/Terminal/Vscode/Slack/Macpass/A(finder)/Chrome/Windows/Postman/Intellij/toDoist/Obsidian",
       "manipulators": [
         {
           "type": "basic",
           "from": {
             "key_code": "f",
             "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ],
               "optional": ["any"]
             }
           },
           "to": [
             {
               "shell_command": "open /Applications/Firefox.app"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "caps_lock pressed",
-              "value": 1
             }
           ]
         },
@@ -56,19 +130,18 @@
           "from": {
             "key_code": "t",
             "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ],
               "optional": ["any"]
             }
           },
           "to": [
             {
               "shell_command": "open System/Applications/Utilities/Terminal.app"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "caps_lock pressed",
-              "value": 1
             }
           ]
         },
@@ -77,19 +150,18 @@
           "from": {
             "key_code": "s",
             "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ],
               "optional": ["any"]
             }
           },
           "to": [
             {
-              "shell_command": "open '/Applications/Sublime Text.app'"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "caps_lock pressed",
-              "value": 1
+              "shell_command": "open '/Applications/Slack.app'"
             }
           ]
         },
@@ -98,19 +170,18 @@
           "from": {
             "key_code": "v",
             "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ],
               "optional": ["any"]
             }
           },
           "to": [
             {
               "shell_command": "open '/Applications/Visual Studio Code.app'"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "caps_lock pressed",
-              "value": 1
             }
           ]
         },
@@ -119,19 +190,18 @@
           "from": {
             "key_code": "m",
             "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ],
               "optional": ["any"]
             }
           },
           "to": [
             {
               "shell_command": "open /Applications/MacPass.app"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "caps_lock pressed",
-              "value": 1
             }
           ]
         },
@@ -140,19 +210,18 @@
           "from": {
             "key_code": "a",
             "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ],
               "optional": ["any"]
             }
           },
           "to": [
             {
               "shell_command": "open /System/Library/CoreServices/Finder.app"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "caps_lock pressed",
-              "value": 1
             }
           ]
         },
@@ -161,19 +230,18 @@
           "from": {
             "key_code": "c",
             "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ],
               "optional": ["any"]
             }
           },
           "to": [
             {
               "shell_command": "open '/Applications/Google Chrome.app'"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "caps_lock pressed",
-              "value": 1
             }
           ]
         },
@@ -182,19 +250,18 @@
           "from": {
             "key_code": "w",
             "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ],
               "optional": ["any"]
             }
           },
           "to": [
             {
               "shell_command": "open '/Applications/Parallels Desktop.app'"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "caps_lock pressed",
-              "value": 1
             }
           ]
         },
@@ -203,19 +270,18 @@
           "from": {
             "key_code": "p",
             "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ],
               "optional": ["any"]
             }
           },
           "to": [
             {
               "shell_command": "open /Applications/Postman.app"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "caps_lock pressed",
-              "value": 1
             }
           ]
         },
@@ -224,19 +290,18 @@
           "from": {
             "key_code": "i",
             "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ],
               "optional": ["any"]
             }
           },
           "to": [
             {
               "shell_command": "open '/Applications/IntelliJ IDEA CE.app'"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "caps_lock pressed",
-              "value": 1
             }
           ]
         },
@@ -245,6 +310,12 @@
           "from": {
             "key_code": "d",
             "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ],
               "optional": ["any"]
             }
           },
@@ -252,12 +323,110 @@
             {
               "shell_command": "open /Applications/Todoist.app"
             }
-          ],
-          "conditions": [
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "o",
+            "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ],
+              "optional": ["any"]
+            }
+          },
+          "to": [
             {
-              "type": "variable_if",
-              "name": "caps_lock pressed",
-              "value": 1
+              "shell_command": "open /Applications/Obsidian.app"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Caps Lock + HJKL to arrow keys",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "down_arrow"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "up_arrow"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_arrow"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "left_command",
+                "left_control",
+                "left_option"
+              ],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_arrow"
             }
           ]
         }
