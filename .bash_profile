@@ -10,10 +10,11 @@ export GITAWAREPROMPT=~/.bash_prompt
 source "${GITAWAREPROMPT}/main.sh"
 
 # For virtualenv & virtualenvwrapper
-#export WORKON_HOME=$HOME/.virtualenvs
-#export PROJECT_HOME=$HOME/Documents
-#export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-#source /usr/local/bin/virtualenvwrapper.sh
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Documents
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source /Users/siyan/Library/Python/3.8/bin/virtualenvwrapper.sh
+export PATH=/Users/siyan/Library/Python/3.8/bin:$PATH
 
 # For create-react-app to use default browser
 export BROWSER=none

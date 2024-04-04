@@ -39,7 +39,6 @@
   "java.errors.incompleteClasspath.severity": "ignore",
   "workbench.startupEditor": "newUntitledFile",
   "editor.wrappingIndent": "indent",
-  "editor.fontSize": 15,
   "editor.wordWrap": "on",
   "extensions.ignoreRecommendations": false,
   "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
@@ -55,7 +54,10 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.fontFamily": "Input, 'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.fontFamily": "'JetBrains Mono', Menlo, Monaco, 'Courier New', monospace",
   "dart.debugExternalLibraries": true,
   "dart.debugSdkLibraries": false,
   "workbench.iconTheme": "material-icon-theme",
@@ -87,9 +89,13 @@
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.suggestSelection": "first",
     "editor.tabCompletion": "onlySnippets",
-    "editor.wordBasedSuggestions": false
+    "editor.wordBasedSuggestions": "off"
   },
   "editor.formatOnSave": true,
   "python.formatting.blackPath": "/Users/siyan/Library/Python/3.8/bin/black",
-  "redhat.telemetry.enabled": true
+  "redhat.telemetry.enabled": true,
+  "dart.debugExternalPackageLibraries": true,
+  "editor.fontSize": 16,
+  "workbench.fontAliasing": "antialiased",
+  "terminal.integrated.fontSize": 14
 }
