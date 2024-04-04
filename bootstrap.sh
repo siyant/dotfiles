@@ -13,11 +13,11 @@ ln -sfv $DOTFILES_DIR/.bash_prompt ~
 source ~/.bash_profile
 
 # Install homebrew and packages
-# . brew.sh
+. brew.sh
 
 # VS Code
 ## Install extensions
-# . $DOTFILES_DIR/vscode/extensions.sh
+. $DOTFILES_DIR/vscode/extensions.sh
 
 ## Symlink preferences files
 ln -sfv $DOTFILES_DIR/vscode/*.json ~/Library/Application\ Support/Code/User
