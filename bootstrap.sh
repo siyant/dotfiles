@@ -20,7 +20,8 @@ source ~/.bash_profile
 . $DOTFILES_DIR/vscode/extensions.sh
 
 ## Symlink preferences files
-ln -sfv $DOTFILES_DIR/vscode/*.json ~/Library/Application\ Support/Code/User
+ln -sfv $DOTFILES_DIR/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -sfv $DOTFILES_DIR/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 
 # Karabiner
 ln -sfv $DOTFILES_DIR/karabiner ~/.config
