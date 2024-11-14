@@ -21,10 +21,8 @@ export PATH=$MAVEN_HOME/bin:$PATH
 # Python
 export PATH=/Users/siyan/Library/Python/3.8/bin:$PATH
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Documents
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source /Users/siyan/Library/Python/3.8/bin/virtualenvwrapper.sh
-export PATH=/Users/siyan/Library/Python/3.8/bin:$PATH
+source virtualenvwrapper.sh
 
 # For create-react-app to use default browser
 export BROWSER=none
@@ -40,5 +38,22 @@ export PATH=$MAVEN_HOME/bin:$PATH
 
 export ANDROID_SDK_ROOT=/Users/siyan/Library/Android/sdk
 
+export PATH=/opt/homebrew/opt/make/libexec/gnubin:$PATH
+
 # Remove "xxx is an application downloaded from the internet" warning
 export HOMEBREW_CASK_OPTS=--no-quarantine
+eval "$(/opt/homebrew/bin/brew shellenv)"
+. "$HOME/.cargo/env"
+
+# pnpm
+export PNPM_HOME="/Users/siyan/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
+

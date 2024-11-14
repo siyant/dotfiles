@@ -53,6 +53,28 @@ alias gus='git restore --staged'
 # Git log find by commit message
 function glf() { git log --all --grep="$1"; }
 
+# Git up - does a `git pull rebase --autostash`, then shows a log of changes
+function gup() {
+    set -e
+    
+    # always use rebase workflow
+    PULL_ARGS="--rebase --autostash $@"
+    
+    OLD_HEAD="$(git rev-parse HEAD)"
+    
+    git pull $PULL_ARGS
+    
+    NEW_HEAD="$(git rev-parse HEAD)"
+    
+    if [ "$OLD_HEAD" != "$NEW_HEAD" ]; then
+        echo "Diffstat:"
+        git --no-pager diff --color --stat $OLD_HEAD.. |
+        sed 's/^/  /'
+        echo "Log:"
+        git log --color --pretty=oneline --abbrev-commit $OLD_HEAD.. |
+        sed 's/^/  /'
+    fi
+}
 
 # ----------------------
 # ls Aliases
@@ -60,3 +82,14 @@ function glf() { git log --all --grep="$1"; }
 alias ll='ls -alF'
 alias la='ls -A'
 alias ls='ls -CF'
+
+# ---------------------
+# Others
+# ---------------------
+function mkcd()
+{
+    mkdir -p -- "$1" &&
+       cd -P -- "$1"
+}
+
+alias hl='hledger'

@@ -4,7 +4,7 @@
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # macOS settings
-. macos.sh
+. $DOTFILES_DIR/macos.sh
 
 # Symlink files to home directory
 ln -sfv $DOTFILES_DIR/.bash_profile ~
@@ -13,7 +13,7 @@ ln -sfv $DOTFILES_DIR/.bash_prompt ~
 source ~/.bash_profile
 
 # Install homebrew and packages
-. brew.sh
+. $DOTFILES_DIR/brew.sh
 
 # VS Code
 ## Install extensions

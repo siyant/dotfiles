@@ -29,7 +29,7 @@ defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
 
-# Trackpad: enable tap to click for this user and for the login screen
+# [No longer works] Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
@@ -48,10 +48,11 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 10
 defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -int 1
 
 # Show battery percentage in menu bar
-defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+defaults write ~/Library/Preferences/ByHost/com.apple.controlcenter.plist BatteryShowPercentage -bool true
 
 # Dock: tile size
 defaults write com.apple.dock tilesize -int 24
 
 # Dock: remove all app icons
 defaults write com.apple.dock persistent-apps -array
+killall Dock
