@@ -1,0 +1,17 @@
+{
+	"console.log": {
+		"prefix": "log",
+		"body": ["console.log(\"$1\")"],
+		"description": "Expand `log` to `console.log()`"
+	},
+	"clg": {
+		"prefix": "clg",
+		"body": ["console.log(\"$1\")"],
+		"description": "Expand `clg` to `console.log()`"
+	},
+	"clo": {
+		"prefix": "clo",
+		"body": ["console.log(\"$1 :>>\", $1)"],
+		"description": "Expand `clo` to `console.log()`"
+	}
+}

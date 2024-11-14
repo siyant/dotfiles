@@ -1,0 +1,77 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette
+{
+  "vim_mode": true,
+  "assistant": {
+    "default_model": {
+      "provider": "google",
+      "model": "gemini-1.5-flash"
+    },
+    "version": "2"
+  },
+  "base_keymap": "VSCode",
+  "ui_font_size": 16,
+  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_weight": 300,
+  "buffer_font_size": 16,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Nord"
+  },
+  "experimental.theme_overrides": {
+    "background": "#12191d",
+    "editor.background": "#12191d",
+    "editor.gutter.background": "#12191d",
+    "title_bar.background": "#12191d",
+    "toolbar.background": "#12191d",
+    "tab_bar.background": "#12191d",
+    "tab.inactive_background": "#12191d",
+    "panel.background": "#12191d",
+    "scrollbar.track.background": "#12191d",
+    "surface.background": "#12191d",
+    "terminal.background": "#12191d",
+    "players": [
+      {
+        "cursor": "#ede6e2"
+      }
+    ]
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+  "languages": {
+    "Svelte": {
+      "format": {
+        "external": {
+          "command": "npx",
+          "arguments": ["prettier", "--stdin-filepath", "{buffer_path}"]
+        }
+      },
+      "format_on_save": "on",
+      "code_actions_on_format": {
+        "source.organizeImports": true
+      }
+    },
+    "TypeScript": {
+      "code_actions_on_format": {
+        "source.organizeImports": true
+      },
+      "formatter": {
+        "language_server": {
+          "name": "biome"
+        }
+      }
+    }
+  },
+
+  "soft_wrap": "editor_width"
+}

@@ -24,3 +24,8 @@ ln -sfv $DOTFILES_DIR/vscode/*.json ~/Library/Application\ Support/Code/User
 
 # Karabiner
 ln -sfv $DOTFILES_DIR/karabiner ~/.config
+
+# Zed
+ln -sfv $DOTFILES_DIR/zed/settings.json ~/.config/zed/settings.json
+ln -sfv $DOTFILES_DIR/zed/keymap.json ~/.config/zed/keymap.json
+ln -sfv $DOTFILES_DIR/zed/snippets ~/.config/zed/snippets
