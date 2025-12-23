@@ -1,0 +1,26 @@
+{
+  "title": "Set Shift + Enter to Newline",
+  "rules": [
+    {
+      "description": "Change Shift+Enter to Option+Enter (newline)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "return_or_enter",
+            "modifiers": {
+              "mandatory": ["shift"],
+              "optional": ["caps_lock", "option"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "return_or_enter",
+              "modifiers": ["option"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
