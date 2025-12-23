@@ -31,3 +31,6 @@ ln -sfv $DOTFILES_DIR/karabiner ~/.config
 ln -sfv $DOTFILES_DIR/zed/settings.json ~/.config/zed/settings.json
 ln -sfv $DOTFILES_DIR/zed/keymap.json ~/.config/zed/keymap.json
 ln -sfv $DOTFILES_DIR/zed/snippets ~/.config/zed/snippets
+
+# Neovim
+ln -sfv $DOTFILES_DIR/nvim ~/.config/nvim
