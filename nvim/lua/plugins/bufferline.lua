@@ -1,0 +1,26 @@
+return {
+  "akinsho/bufferline.nvim",
+  opts = {
+    highlights = {
+      buffer_selected = { bg = "#434c5d" },
+      close_button_selected = { bg = "#434c5d" },
+      separator_selected = { bg = "#434c5d" },
+      indicator_selected = { bg = "#434c5d" },
+      tab_selected = { bg = "#434c5d" },
+      tab_separator_selected = { bg = "#434c5d" },
+      numbers_selected = { bg = "#434c5d" },
+      diagnostic_selected = { bg = "#434c5d" },
+      hint_selected = { bg = "#434c5d" },
+      hint_diagnostic_selected = { bg = "#434c5d" },
+      info_selected = { bg = "#434c5d" },
+      info_diagnostic_selected = { bg = "#434c5d" },
+      warning_selected = { bg = "#434c5d" },
+      warning_diagnostic_selected = { bg = "#434c5d" },
+      error_selected = { bg = "#434c5d" },
+      error_diagnostic_selected = { bg = "#434c5d" },
+      modified_selected = { bg = "#434c5d" },
+      duplicate_selected = { bg = "#434c5d" },
+      pick_selected = { bg = "#434c5d" },
+    },
+  },
+}

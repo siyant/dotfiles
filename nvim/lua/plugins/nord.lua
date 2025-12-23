@@ -1,5 +1,3 @@
-local bg = "#12191d"
-
 return {
   {
     "dupeiran001/nord.nvim",
@@ -43,14 +41,7 @@ return {
         hl.SnacksIndent = { fg = "#3b4252" }
         hl.SnacksIndentScope = { fg = "#3b4252" }
 
-        -- Tab bar
-        hl.TabLine = { bg = "#12191d" }
-        hl.TabLineFill = { bg = "#12191d" }
-        hl.TabLineSel = { bg = "#12191d" }
-
         -- Status line and lualine
-        hl.StatusLine = { bg = "#12191d" }
-        hl.StatusLineNC = { bg = "#12191d" }
         hl.lualine_c_normal = { bg = "#2c323e" }
         hl.lualine_c_insert = { bg = "#2c323e" }
         hl.lualine_c_visual = { bg = "#2c323e" }
