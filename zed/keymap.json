@@ -19,5 +19,85 @@
       "cmd-shift-l": "editor::DuplicateLineDown",
       "cmd-shift-d": "editor::SelectAllMatches" // Select all occurrences of current selection
     }
+  },
+  {
+    "bindings": {
+      "cmd-shift-o": "workspace::Open"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-o": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-p": "command_palette::Toggle"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-g": "outline::Toggle"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-tab": "pane::ActivateNextItem"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-shift-tab": "pane::ActivatePreviousItem"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-[": "pane::GoBack"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-]": "pane::GoForward"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-shift-v": "git_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "g g": null
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "g g": "editor::GoToImplementation"
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "g t": null
+    }
+  },
+  {
+    "bindings": {
+      "g t": "vim::WindowTop"
+    }
+  },
+  {
+    "bindings": {
+      "g b": "vim::WindowBottom"
+    }
   }
 ]
