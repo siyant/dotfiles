@@ -7,11 +7,11 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $DOTFILES_DIR/macos.sh
 
 # Symlink files to home directory
-ln -sfv $DOTFILES_DIR/.bash_profile ~
+ln -sfv $DOTFILES_DIR/.zshrc ~
 ln -sfv $DOTFILES_DIR/.bash_aliases ~
 ln -sfv $DOTFILES_DIR/.bash_prompt ~
 ln -sfv $DOTFILES_DIR/.tmux.conf ~
-source ~/.bash_profile
+source ~/.zshrc
 
 # Install homebrew and packages
 . $DOTFILES_DIR/brew.sh

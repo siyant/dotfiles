@@ -2,13 +2,17 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-8.jdk/Contents/Home
 
-# Set up autojump
-[ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && . $(brew --prefix)/etc/profile.d/autojump.sh
+# Set up autojump (use zsh version if available)
+if [ -f $(brew --prefix)/share/autojump/autojump.zsh ]; then
+    . $(brew --prefix)/share/autojump/autojump.zsh
+elif [ -f $(brew --prefix)/etc/profile.d/autojump.sh ]; then
+    . $(brew --prefix)/etc/profile.d/autojump.sh
+fi
 
 # Add aliases
 [ -f ~/.bash_aliases ] && . ~/.bash_aliases
 
-# Custom bash prompt (from https://github.com/jimeh/git-aware-prompt)
+# Custom zsh prompt (adapted from git-aware-prompt)
 export GITAWAREPROMPT=~/.bash_prompt
 source "${GITAWAREPROMPT}/main.sh"
 

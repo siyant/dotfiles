@@ -14,14 +14,24 @@ find_git_branch() {
 find_git_dirty() {
   git_clean=""
   git_dirty=""
-  local status=$((git status --porcelain) 2> /dev/null)
-  if [[ "$status" != "" ]]; then
+  local git_status=$((git status --porcelain) 2> /dev/null)
+  if [[ "$git_status" != "" ]]; then
     git_dirty=$git_branch
   else
     git_clean=$git_branch
   fi
 }
 
-PROMPT_COMMAND="find_git_branch; find_git_dirty; $PROMPT_COMMAND"
-
-export PS1="\n\[$bakblk\] \u \[$txtcyn\]\W\[$txtgrn\]\$git_clean\[$txtred\]\$git_dirty \[$txtrst\] "
+if [ -n "$ZSH_VERSION" ]; then
+  # Zsh configuration
+  setopt PROMPT_SUBST
+  precmd() {
+    find_git_branch
+    find_git_dirty
+  }
+  export PROMPT=$'\n%{$bakblk%} %n %{$txtcyn%}%1~%{$txtgrn%}$git_clean%{$txtred%}$git_dirty %{$txtrst%} '
+else
+  # Bash configuration
+  PROMPT_COMMAND="find_git_branch; find_git_dirty; $PROMPT_COMMAND"
+  export PS1="\n\[$bakblk\] \u \[$txtcyn\]\W\[$txtgrn\]\$git_clean\[$txtred\]\$git_dirty \[$txtrst\] "
+fi
