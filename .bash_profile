@@ -19,16 +19,16 @@ export MAVEN_HOME=/Library/apache-maven-3.6.3
 export PATH=$MAVEN_HOME/bin:$PATH
 
 # Python
-export PATH=/Users/siyan/Library/Python/3.8/bin:$PATH
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-source virtualenvwrapper.sh
+# export PATH=/Users/siyan/Library/Python/3.8/bin:$PATH
+# export WORKON_HOME=$HOME/.virtualenvs
+# export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+# source virtualenvwrapper.sh
 
 # For create-react-app to use default browser
 export BROWSER=none
 
 export PATH=$PATH:/usr/local/Cellar/node/13.12.0/bin:/Applications/flutter/bin
-
+export PATH="/Users/siyan/.local/bin:$PATH"
 export PATH=/usr/local/Cellar/ruby/2.7.2/bin:/usr/local/lib/ruby/gems/2.7.0/bin:$PATH
 export PATH="/usr/local/opt/openjdk/bin:$PATH"
 export PATH="/usr/local/Cellar/python@3.9/3.9.2_1/Frameworks/Python.framework/Versions/3.9/bin:$PATH"
@@ -43,13 +43,13 @@ export PATH=/opt/homebrew/opt/make/libexec/gnubin:$PATH
 # Remove "xxx is an application downloaded from the internet" warning
 export HOMEBREW_CASK_OPTS=--no-quarantine
 eval "$(/opt/homebrew/bin/brew shellenv)"
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 
 # pnpm
 export PNPM_HOME="/Users/siyan/Library/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+*":$PNPM_HOME:"*) ;;
+*) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
 
@@ -57,3 +57,6 @@ esac
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
 
+# prevent setlocale: LC_CTYPE warning
+export LC_CTYPE=$LANG
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"

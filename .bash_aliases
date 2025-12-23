@@ -16,7 +16,7 @@ alias gcm='git commit --message'
 alias gcf='git commit --fixup'
 alias gco='git checkout'
 alias gcob='git checkout -b'
-alias gcom='git checkout master'
+alias gcom='git checkout main'
 alias gcos='git checkout staging'
 alias gcod='git checkout develop'
 alias gd='git diff'
@@ -32,7 +32,7 @@ alias gm='git merge --no-ff'
 alias gma='git merge --abort'
 alias gmc='git merge --continue'
 alias gpu='git push'
-alias gpusu='git push --set-upstream origin $(git branch --show-current)' 
+alias gpusu='git push --set-upstream origin $(git branch --show-current)'
 alias gp='git pull'
 alias gpr='git pull --rebase'
 alias gr='git rebase'
@@ -56,16 +56,16 @@ function glf() { git log --all --grep="$1"; }
 # Git up - does a `git pull rebase --autostash`, then shows a log of changes
 function gup() {
     set -e
-    
+
     # always use rebase workflow
     PULL_ARGS="--rebase --autostash $@"
-    
+
     OLD_HEAD="$(git rev-parse HEAD)"
-    
+
     git pull $PULL_ARGS
-    
+
     NEW_HEAD="$(git rev-parse HEAD)"
-    
+
     if [ "$OLD_HEAD" != "$NEW_HEAD" ]; then
         echo "Diffstat:"
         git --no-pager diff --color --stat $OLD_HEAD.. |
@@ -93,3 +93,7 @@ function mkcd()
 }
 
 alias hl='hledger'
+
+alias dhome='displayplacer "id:E31452CE-E0BE-4A9B-B27B-82D123E3E71A res:3008x1692 hz:60 color_depth:8 enabled:true scaling:on origin:(0,0) degree:0" "id:37D8832A-2D66-02CA-B9F7-8F30A301B230 res:1512x982 hz:120 color_depth:8 enabled:true scaling:on origin:(-1512,373) degree:0"'
+
+alias doffice='displayplacer "id:E31452CE-E0BE-4A9B-B27B-82D123E3E71A res:3008x1692 hz:60 color_depth:8 enabled:true scaling:on origin:(0,0) degree:0" "id:37D8832A-2D66-02CA-B9F7-8F30A301B230 res:1512x982 hz:120 color_depth:8 enabled:true scaling:on origin:(783,1692) degree:0"'
