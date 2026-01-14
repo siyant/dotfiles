@@ -53,6 +53,12 @@ alias gus='git restore --staged'
 # Git log find by commit message
 function glf() { git log --all --grep="$1"; }
 
+# Git checkout branch with fzf
+function gch() {
+  local branch=$(git branch --sort=-committerdate | fzf | sed 's#^[ *]*##')
+  [ -n "$branch" ] && git checkout "$branch"
+}
+
 # Git up - does a `git pull rebase --autostash`, then shows a log of changes
 function gup() {
     set -e

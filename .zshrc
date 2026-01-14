@@ -64,3 +64,6 @@ export PATH=$BUN_INSTALL/bin:$PATH
 # prevent setlocale: LC_CTYPE warning
 export LC_CTYPE=$LANG
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+
+# fzf shell integration
+source <(fzf --zsh)
