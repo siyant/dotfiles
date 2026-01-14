@@ -29,6 +29,9 @@ map({ "n", "x" }, "<leader>sW", LazyVim.pick("grep_word"), { desc = "Word (root)
 map("n", "<leader>fr", function() Snacks.picker.recent({ filter = { cwd = true }}) end, { desc = "Recent (cwd)" })
 map("n", "<leader>fR", LazyVim.pick("oldfiles"), { desc = "Recent (all)" })
 
+-- Save file
+map("n", "<leader>fs", "<cmd>w<cr>", { desc = "Save File" })
+
 -- Terminal: swap so lowercase is cwd, uppercase is root
 map("n", "<leader>ft", function() Snacks.terminal(nil) end, { desc = "Terminal (cwd)" })
 map("n", "<leader>fT", function() Snacks.terminal(nil, { cwd = LazyVim.root() }) end, { desc = "Terminal (root)" })
@@ -40,3 +43,7 @@ map("n", "<leader>gG", function() Snacks.lazygit({ cwd = LazyVim.root() }) end, 
 -- Git Log: swap so lowercase is cwd, uppercase is root
 map("n", "<leader>gl", function() Snacks.picker.git_log({ cwd = vim.fn.getcwd() }) end, { desc = "Git Log (cwd)" })
 map("n", "<leader>gL", function() Snacks.picker.git_log() end, { desc = "Git Log (root)" })
+
+map("n", "<leader>bx", function()
+  Snacks.bufdelete.all()
+end, { desc = "Close All Buffers" })
